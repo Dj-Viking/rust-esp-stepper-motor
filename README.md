@@ -32,7 +32,7 @@ flowchart TD
 
         Main --> Loop[Main Loop]
 
-        Loop --> StepFunction[step_on_delay()]
+        Loop --> StepFunction[step-on-delay()]
         StepFunction --> StepHigh[STEP HIGH]
         StepFunction --> Delay10A[10ms Delay]
         StepFunction --> StepLow[STEP LOW]
