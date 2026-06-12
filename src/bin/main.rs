@@ -21,7 +21,6 @@ use esp_hal::usb_serial_jtag::UsbSerialJtag;
 use core::fmt::Write;
 use embedded_io_async::Read;
 
-
 // if the main function panics during monitoring `sh build.sh -m`
 // (if monitoring works), the panic message will be sent to the console through the usb JTAG back
 // to the computer terminal from the esp 
