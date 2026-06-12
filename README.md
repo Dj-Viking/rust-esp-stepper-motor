@@ -113,24 +113,3 @@ flowchart TD
 |                 Stepper Motor                    |
 +--------------------------------------------------+
 ```
-
-# Current Runtime Flow
-
-```mermaid
-sequenceDiagram
-
-    participant MCU as ESP32
-    participant GPIO as STEP Pin
-    participant DRV as DRV8825
-    participant Motor as Stepper Motor
-
-    loop Forever
-        MCU->>GPIO: set-high
-        GPIO->>DRV: STEP pulse rising edge
-        DRV->>Motor: Advance 1 microstep
-        MCU->>MCU: delay 10ms
-
-        MCU->>GPIO: set-low
-        MCU->>MCU: delay 10ms
-    end
-```
