@@ -14,7 +14,7 @@
 sh build.sh
 ```
 
-* to run the monitor for getting panic messages back to the terminal add -m flag
+* to run the monitor for getting panic messages back to the terminal
 
 ```bash
 cargo run
