@@ -74,15 +74,15 @@ async fn main(spawner: Spawner) {
 	// pins 
 
 	// outputs
-	let op0             = Output::new(m0,   Level::High, OutputConfig::default());
-	let op1             = Output::new(m1,   Level::Low,  OutputConfig::default());
-	let op2             = Output::new(m2,   Level::Low,  OutputConfig::default());
+	let op0             = Output::new(m0,    Level::High, OutputConfig::default());
+	let op1             = Output::new(m1,    Level::Low,  OutputConfig::default());
+	let op2             = Output::new(m2,    Level::Low,  OutputConfig::default());
 
-	let oprst           = Output::new(reset,  Level::Low,  OutputConfig::default());
-	let opdir           = Output::new(dir,  Level::Low,  OutputConfig::default());
-	let opslp           = Output::new(slp,  Level::Low,  OutputConfig::default());
+	let oprst           = Output::new(reset, Level::Low,  OutputConfig::default());
+	let opdir           = Output::new(dir,   Level::Low,  OutputConfig::default());
+	let opslp           = Output::new(slp,   Level::Low,  OutputConfig::default());
 
-	let mut step_output = Output::new(step, Level::High, OutputConfig::default());
+	let mut step_output = Output::new(step,  Level::High, OutputConfig::default());
 	// outputs
 
 	let mut delay       = Delay::new();
