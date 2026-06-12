@@ -17,7 +17,7 @@ sh build.sh
 * to run the monitor for getting panic messages back to the terminal add -m flag
 
 ```bash
-sh build.sh -m
+cargo run
 ```
 
 ---
