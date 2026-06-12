@@ -6,6 +6,22 @@
 	- allows you to flash the esp32 with the binary target that cargo compiled from the rust code and create packages
 ---
 
+# Run and Debug
+
+* run the build shell script
+
+```bash
+sh build.sh
+```
+
+* to run the monitor for getting panic messages back to the terminal add -m flag
+
+```bash
+sh build.sh -m
+```
+
+---
+
 # Architecture
 
 ```mermaid
