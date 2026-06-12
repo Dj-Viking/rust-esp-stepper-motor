@@ -40,8 +40,6 @@ fn panic(p: &core::panic::PanicInfo) -> ! {
 // For more information see: <https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/system/app_image_format.html#application-description>
 esp_bootloader_esp_idf::esp_app_desc!();
 
-const LED_COUNT: usize = 2;
-
 #[esp_hal_embassy::main]
 async fn main(spawner: Spawner) {
 
