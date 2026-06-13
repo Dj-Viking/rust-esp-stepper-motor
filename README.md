@@ -1,6 +1,6 @@
 # Dependencies
 
-* rust and cargo
+* [rust](https://rust-lang.org/learn/get-started/) and cargo (comes with rust installation)
 * espflash 
 	- to use this you need to `cargo install espflash` so that it's available in your shell path
 	- allows you to flash the esp32 with the binary target that cargo compiled from the rust code and create packages
