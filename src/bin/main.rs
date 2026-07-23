@@ -53,31 +53,31 @@ async fn main(spawner: Spawner) {
 	// pins [according to that DRV8825 motor module - 
 	// pins will have to change if we change the
 	// motor module we wanna use
-	let _enable = Output::new(peripherals.GPIO5,
-        		esp_hal::gpio::Level::High,
+	let _enable = Output::new(peripherals.GPIO7,
+        		esp_hal::gpio::Level::Low,
 				OutputConfig::default());
 
 		// step degree subdivisions
-	let mut m0    = peripherals.GPIO6;
-	let mut m1    = peripherals.GPIO7;
-	let mut m2    = peripherals.GPIO8;
+	let mut m1    = peripherals.GPIO8;
+	let mut m2    = peripherals.GPIO0;
+	let mut m3    = peripherals.GPIO14;
 		// step degree subdivisions
 
-	let mut step  = peripherals.GPIO0;
+	let mut step  = peripherals.GPIO4;
 	
-	let mut reset = peripherals.GPIO9;
+	let mut reset = peripherals.GPIO15;
 	let mut dir   = peripherals.GPIO1;
-	let mut slp   = peripherals.GPIO4;
+	let mut slp   = peripherals.GPIO6;
 	// pins 
 
 	// outputs
-	let op0             = Output::new(m0,    Level::High, OutputConfig::default());
-	let op1             = Output::new(m1,    Level::Low,  OutputConfig::default());
-	let op2             = Output::new(m2,    Level::Low,  OutputConfig::default());
+	let op0             = Output::new(m1,    Level::High, OutputConfig::default());
+	let op1             = Output::new(m2,    Level::Low,  OutputConfig::default());
+	let op2             = Output::new(m3,    Level::Low,  OutputConfig::default());
 
-	let oprst           = Output::new(reset, Level::Low,  OutputConfig::default());
+	let oprst           = Output::new(reset, Level::High,  OutputConfig::default());
 	let opdir           = Output::new(dir,   Level::Low,  OutputConfig::default());
-	let opslp           = Output::new(slp,   Level::Low,  OutputConfig::default());
+	let opslp           = Output::new(slp,   Level::High,  OutputConfig::default());
 
 	let mut step_output = Output::new(step,  Level::High, OutputConfig::default());
 	// outputs
